@@ -1,0 +1,52 @@
+[
+    {
+      "joker": false,
+      "count": 0,
+      "shuffled": false,
+      "remaining": 0,
+      "success": true
+    },
+    {
+      "joker": true,
+      "count": 0,
+      "shuffled": false,
+      "remaining": 0,
+      "success": true
+    },
+    {
+      "joker": false,
+      "count": 1,
+      "shuffled": false,
+      "remaining": 52,
+      "success": true
+    },
+    {
+      "joker": true,
+      "count": 1,
+      "shuffled": false,
+      "remaining": 54,
+      "success": true
+    },
+    {
+      "joker": false,
+      "count": 20,
+      "shuffled": false,
+      "remaining": 1040,
+      "success": true
+    },
+    {
+      "joker": true,
+      "count": 20,
+      "shuffled": false,
+      "remaining": 1080,
+      "success": true
+    },
+    {
+      "joker": false,
+      "count": 21,
+      "shuffled": false,
+      "remaining": 0,
+      "success": false,
+      "error": "The max number of Decks is 20."
+    }
+  ]
