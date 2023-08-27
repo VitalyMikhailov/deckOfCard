@@ -26,10 +26,34 @@ function drawCardsFromDeck(deckId, numberOfCards){
         url: URL+`${deckId}/draw/?count=${numberOfCards}`,
     })}
 
-function shuffleDeck(deckId){
+function shuffleDeck(deckId) {
     return cy.request({
         method: 'GET',
-        url: URL+`${deckId}/shuffle/`,
+        url: URL + `${deckId}/shuffle/`,
     })
 }
-export {createNewDeck, createNewDeckShuffled, drawCardsFromDeck, shuffleDeck}
+function createPile(deckId, player, arr){
+    return cy.request({
+        method: 'GET',
+        url: URL+`${deckId}/pile/${player}/add/`,
+        qs:{
+            cards: `${arr[0]},${arr[1]},${arr[2]}`
+        },
+    })
+}
+
+function listPile(deckId, player) {
+    return cy.request({
+        method: 'GET',
+        url: URL + `${deckId}/pile/${player}/list/`,
+    })
+}
+
+function drawCardsPile(deckId, player, draw){
+    return cy.request({
+        method: 'GET',
+        url: URL+`${deckId}/pile/${player}/draw/?count=${draw}`,
+    })
+}
+
+export {createNewDeck, createNewDeckShuffled, drawCardsFromDeck, shuffleDeck, createPile, listPile, drawCardsPile}
